@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, fetchCategories } from './productsSlice';
 import { selectFilteredProducts } from './productsSelectors';
 import { setSearchQuery, setCategory, setSortBy } from '../filters/filtersSlice';
+import { useDebounce } from '../../hooks/useDebounce';
 import ProductCard from './ProductCard';
 import './ProductList.scss';
 
@@ -14,6 +15,7 @@ const ProductList = () => {
 
     // Local state for debounced search input to make typing feel smooth
     const [searchInput, setSearchInput] = useState(searchQuery);
+    const debouncedSearch = useDebounce(searchInput, 500);
 
     useEffect(() => {
         if (status === 'idle') {
@@ -24,12 +26,8 @@ const ProductList = () => {
 
     // Debounce search effect
     useEffect(() => {
-        const timer = setTimeout(() => {
-            dispatch(setSearchQuery(searchInput));
-        }, 500);
-
-        return () => clearTimeout(timer);
-    }, [searchInput, dispatch]);
+        dispatch(setSearchQuery(debouncedSearch));
+    }, [debouncedSearch, dispatch]);
 
     const handleCategoryChange = (e) => {
         dispatch(setCategory(e.target.value));
