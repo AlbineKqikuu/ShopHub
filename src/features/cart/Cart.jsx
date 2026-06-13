@@ -24,7 +24,7 @@ const Cart = () => {
         return (
             <div className="container cart-empty">
                 <h2>Your cart is empty</h2>
-                <p>Looks like you haven't added anything to your cart yet.</p>
+                <p>Looks like you haven&apos;t added anything to your cart yet.</p>
                 <Link to="/products" className="btn btn--primary">Start Shopping</Link>
             </div>
         );
@@ -90,9 +90,9 @@ const Cart = () => {
                         <span>${total.toFixed(2)}</span>
                     </div>
 
-                    <button className="btn btn--primary btn--full">
+                    <Link to="/checkout" className="btn btn--primary btn--full" style={{ textAlign: 'center', display: 'block' }}>
                         Proceed to Checkout
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

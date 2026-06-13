@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--card-background);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: all $transition-fast;
+    padding: 0;
+
+    &:hover {
+        background-color: var(--border-color);
+        transform: scale(1.05);
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &--dark {
+        color: #f59e0b; // Sun color in dark mode? Actually Moon color.
+    }
+
+    &--light {
+        color: #f59e0b; // Sun color.
+    }
+}

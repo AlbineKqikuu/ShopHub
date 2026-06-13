@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import './Header.scss';
 
 const Header = () => {
@@ -36,6 +37,8 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
+
+                <ThemeToggle />
             </div>
         </header>
     );

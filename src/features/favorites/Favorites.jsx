@@ -10,7 +10,7 @@ const Favorites = () => {
         return (
             <div className="container favorites-empty">
                 <h2>No favorites yet</h2>
-                <p>You haven't saved any items to your favorites list.</p>
+                <p>You haven&apos;t saved any items to your favorites list.</p>
                 <Link to="/products" className="btn btn--primary">Browse Products</Link>
             </div>
         );

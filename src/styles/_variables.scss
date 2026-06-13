@@ -1,14 +1,35 @@
 // Color variables
-$primary-color: #2563eb;
-$secondary-color: #64748b;
-$accent-color: #f59e0b;
-$background-color: #f8fafc;
-$card-background: #ffffff;
-$text-primary: #1e293b;
-$text-secondary: #64748b;
-$error-color: #ef4444;
-$success-color: #22c55e;
-$border-color: #e2e8f0;
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --accent-color: #f59e0b;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --error-color: #ef4444;
+    --success-color: #22c55e;
+    --border-color: #e2e8f0;
+}
+
+.dark-theme {
+    --background-color: #0f172a;
+    --card-background: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$accent-color: var(--accent-color);
+$background-color: var(--background-color);
+$card-background: var(--card-background);
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$error-color: var(--error-color);
+$success-color: var(--success-color);
+$border-color: var(--border-color);
 
 // Spacing
 $spacing-xs: 0.25rem;
