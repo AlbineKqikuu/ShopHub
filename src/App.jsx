@@ -3,7 +3,7 @@ import Layout from './components/Layout/Layout';
 import ProductList from './features/products/ProductList';
 import ProductDetail from './features/products/ProductDetail';
 import Cart from './features/cart/Cart';
-// import Favorites from './features/favorites/Favorites';
+import Favorites from './features/favorites/Favorites';
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
                     <Route path="products" element={<ProductList />} />
                     <Route path="products/:id" element={<ProductDetail />} />
                     <Route path="cart" element={<Cart />} />
-                    <Route path="favorites" element={<div>Favorites Page (Coming Soon)</div>} />
+                    <Route path="favorites" element={<Favorites />} />
                     <Route path="*" element={<div>404 Not Found</div>} />
                 </Route>
             </Routes>
