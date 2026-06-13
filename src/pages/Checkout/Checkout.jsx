@@ -62,7 +62,7 @@ const Checkout = () => {
                             <input
                                 id="fullName"
                                 {...register('fullName', { required: 'Full name is required' })}
-                                placeholder="John Doe"
+                                placeholder="Albine Kqiku"
                                 className={errors.fullName ? 'error' : ''}
                             />
                             {errors.fullName && <span className="error-message">{errors.fullName.message}</span>}
@@ -79,7 +79,7 @@ const Checkout = () => {
                                         message: 'Invalid email address',
                                     },
                                 })}
-                                placeholder="john@example.com"
+                                placeholder="kqikualbine@gmail.com"
                                 className={errors.email ? 'error' : ''}
                             />
                             {errors.email && <span className="error-message">{errors.email.message}</span>}
