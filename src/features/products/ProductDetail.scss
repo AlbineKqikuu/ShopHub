@@ -94,7 +94,8 @@
         transition: $transition-fast;
 
         &:hover {
-            background-color: darken($background-color, 5%);
+            background-color: $background-color;
+            filter: brightness(0.95);
         }
     }
 
@@ -120,7 +121,8 @@
         color: white;
 
         &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: $primary-color;
+            filter: brightness(0.9);
         }
     }
 

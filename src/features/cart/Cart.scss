@@ -80,7 +80,8 @@
         text-decoration: underline;
 
         &:hover {
-            color: darken($error-color, 10%);
+            color: $error-color;
+            filter: brightness(0.9);
         }
     }
 
