@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: $card-background;
+    box-shadow: $shadow-sm;
+    z-index: 1000;
+    padding: $spacing-md 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text-primary;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        gap: $spacing-lg;
+
+        li {
+            position: relative;
+        }
+
+        a {
+            font-weight: 500;
+            color: $text-secondary;
+            transition: $transition-fast;
+
+            &:hover,
+            &.active {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .badge {
+        position: absolute;
+        top: -8px;
+        right: -15px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        border-radius: 10px;
+        min-width: 18px;
+        text-align: center;
+
+        &--accent {
+            background-color: $accent-color;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .header {
+        &__nav-list {
+            gap: $spacing-sm;
+            font-size: 0.9rem;
+        }
+    }
+}
