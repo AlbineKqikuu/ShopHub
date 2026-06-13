@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+
+.product-card {
+    background-color: $card-background;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    transition: $transition-normal;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid $border-color;
+
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-4px);
+    }
+
+    &__link {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        padding: $spacing-lg;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid $border-color;
+
+        img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__favorite {
+        position: absolute;
+        top: $spacing-sm;
+        right: $spacing-sm;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(white, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: $shadow-sm;
+        transition: $transition-fast;
+
+        &:hover {
+            background-color: white;
+            transform: scale(1.1);
+        }
+
+        &.active {
+            color: $error-color;
+        }
+    }
+
+    &__info {
+        padding: $spacing-md;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: $text-secondary;
+        margin-bottom: $spacing-xs;
+        letter-spacing: 0.05em;
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 2.8rem;
+    }
+
+    &__footer {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__rating {
+        font-size: 0.85rem;
+        color: $text-secondary;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .star {
+            color: $accent-color;
+        }
+    }
+
+    &__price {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $primary-color;
+    }
+
+    &__add-btn {
+        width: 100%;
+        padding: $spacing-md;
+        background-color: $primary-color;
+        color: white;
+        font-weight: 600;
+        transition: $transition-fast;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
